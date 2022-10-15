@@ -1,4 +1,4 @@
-package com.example.employeemanager.exception;
+package com.example.playersmanager.exception;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(String message) {
