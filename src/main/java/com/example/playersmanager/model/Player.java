@@ -16,6 +16,7 @@ public class Player implements Serializable {
     private String number;
     private String height;
     private String weight;
+    private String salary;
     @Column(columnDefinition = "text")
     private String imageUrl;
     @Column(nullable = false, updatable = false)
@@ -25,7 +26,7 @@ public class Player implements Serializable {
     public Player() {
     }
 
-    public Player(String name, String position, String dateOfBirth, String placeOfBirth, String number, String height, String weight, String imageUrl) {
+    public Player(String name, String position, String dateOfBirth, String placeOfBirth, String number, String height, String weight, String salary, String imageUrl) {
         this.name = name;
         this.position = position;
         this.dateOfBirth = dateOfBirth;
@@ -33,6 +34,7 @@ public class Player implements Serializable {
         this.number = number;
         this.height = height;
         this.weight = weight;
+        this.salary = salary;
         this.imageUrl = imageUrl;
     }
 
@@ -96,6 +98,14 @@ public class Player implements Serializable {
         this.weight = weight;
     }
 
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
@@ -111,7 +121,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Player{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", position='" + position + '\'' +
@@ -120,6 +130,7 @@ public class Player implements Serializable {
                 ", number='" + number + '\'' +
                 ", height='" + height + '\'' +
                 ", weight='" + weight + '\'' +
+                ", salary='" + salary + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
